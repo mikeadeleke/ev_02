@@ -1,5 +1,9 @@
 Ev02::Application.routes.draw do
-  resources :playlists
+  resources :startups
+
+  resources :playlists do
+    resources :startups
+  end
 
   root to: 'playlists#index'
   # The priority is based upon order of creation: first created -> highest priority.
